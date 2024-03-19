@@ -1,4 +1,4 @@
-import Provider from "../../services/Provider.js";
+import Provider from "./../../../services/Provider.js";
 
 export default class TagsAll {
 
