@@ -14,14 +14,16 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1 a {
     font-size: 2rem;
     font-weight: 700;
     color: #818FDC;
     margin: 15px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-h2 {
+.container {
     margin-top: 7.5%;
 }
 
@@ -65,74 +67,9 @@ nav a.active {
 section {
     padding: 2rem;
 }
-
-.section-mouvante {
-    display: none;
-    flex-direction: column;
-}
-
 .searchbar {
     padding: 0.5rem;
     margin-bottom: 1rem;
     width: 100%;
     box-sizing: border-box;
-}
-
-.box {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-}
-
-
-/* Styles généraux pour les cartes des clubs */
-.club-card, .ligue-card, .pays-card {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-}
-
-/* Style du nom du club */
-.club-name, .ligue-name, .pays-name{
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
-    margin: 0;
-}
-
-/* Style du code du club */
-.club-code {
-    color: #777;
-    margin: 0.5rem 0;
-}
-
-/* Style du nom de la ligue */
-.club-ligue {
-    color: #555;
-    margin: 0;
-}
-
-/* Style du nom du pays */
-.club-country {
-    color: #555;
-    margin: 0;
-}
-
-/* Style de la barre de recherche pour les clubs */
-#club-searchbar, #ligue-searchbar, #pays-searchbar{
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Style de la liste des clubs */
-#clubs-list, #ligues-list, #pays-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
 }

@@ -1,15 +1,16 @@
 import Home from './views/pages/Home.js';
 import Error404 from './views/pages/Error404.js';
-// import TagsAll from './views/pages/tags/TagsAll.js';
+import TagsAll from './views/pages/tags/TagsAll.js';
+import TagContent from './views/pages/tags/TagContent.js';
 
 import Utils from './services/Utils.js';
-// console.log('yo');
+
 const routes = {
     '/'                 : Home
     // , '/personnages'    : PersonnagesAll
-    // , '/tags'           : TagsAll
+    , '/tags'           : TagsAll
     // , '/personnage/:id' : PersonnagesContent
-    // , '/tag/:id'        : TagContent
+    , '/tag/:id'        : TagContent
 };
 
 console.log(routes);

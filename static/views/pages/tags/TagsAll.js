@@ -3,7 +3,7 @@ import Provider from "./../../../services/Provider.js";
 export default class TagsAll {
 
     async render () {
-        let personnages = await Provider.fetchElem(50); // Supposons que vous récupériez les personnages ici
+        let personnages = await Provider.fetchElem();
         let tags = []; // Initialise un tableau vide pour stocker tous les tags
 
         // Parcours tous les personnages pour extraire les tags
@@ -21,6 +21,7 @@ export default class TagsAll {
                     /*html*/`
                     <div class="tag-item">
                         <p>${tag}</p>
+                        <a href="#/tag/${tag}">Voir plus</a>
                     </div>
                     `
                     ).join('\n ')
