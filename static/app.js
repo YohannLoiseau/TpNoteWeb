@@ -3,6 +3,7 @@ import Error404 from './views/pages/Error404.js';
 import TagsAll from './views/pages/tags/TagsAll.js';
 import TagContent from './views/pages/tags/TagContent.js';
 import PersonnagesAll from './views/pages/personnages/PersonnagesAll.js';
+import PersonnagesContent from './views/pages/personnages/PersonnageContent.js';
 
 import Utils from './services/Utils.js';
 
@@ -10,7 +11,7 @@ const routes = {
     '/'                 : Home
     , '/personnages'    : PersonnagesAll
     , '/tags'           : TagsAll
-    // , '/personnage/:id' : PersonnagesContent
+    , '/personnage/:id' : PersonnagesContent
     , '/tag/:id'        : TagContent
 };
 
@@ -23,7 +24,6 @@ const router = async () => {
     
     let page = routes[parsedURL] ? new routes[parsedURL] : Error404
 
-    
     content.innerHTML = await page.render();
 }
 
