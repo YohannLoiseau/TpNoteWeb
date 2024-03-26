@@ -73,3 +73,65 @@ section {
     width: 100%;
     box-sizing: border-box;
 }
+
+/* partie de style pour personnages all  */
+
+.personnages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.personnage-card {
+    width: 17%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0.3, 0.3, 0.3, 0.3);
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-title {
+    margin-bottom: 2%;
+    flex-basis: 90%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.personnage-title {
+    font-size: 1rem;
+}
+
+.personnage-icon {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.btn-group {
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: 1px solid #7E7E7E;
+    border-radius: 4px;
+    background-color: #F1F1F1;
+    color: #7E7E7E;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #818FDC;
+    color: white;
+}
+

@@ -28,7 +28,7 @@ export default class TagContent {
                     .join('\n ')
                 }
             </div>
-            <p><a href="/">Revenir à l'accueil</a></p>
+            <p><a href="#">Revenir à l'accueil</a></p>
             <p><a href="#/tags">Retour à la liste des tags</a></p>
         `;
         return view;
