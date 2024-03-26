@@ -12,7 +12,12 @@ export default class LazyLoad {
                 console.log(entry);
                 entry.target.style.opacity = entry.intersectionRatio;
                 if (entry.isIntersecting) {
-                    entry.target.src = entry.target.dataset.src;
+                    const images = entry.target.querySelectorAll('img');
+                    images.forEach(img => {
+                        if (img.src === '' && img.dataset.src) {
+                            img.src = img.dataset.src;
+                        }
+                    });
                 }
             });
         }, options);
