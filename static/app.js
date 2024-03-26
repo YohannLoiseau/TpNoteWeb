@@ -25,6 +25,7 @@ const router = async () => {
     let page = routes[parsedURL] ? new routes[parsedURL] : Error404
 
     content.innerHTML = await page.render();
+    await page.after_render();
 }
 
 // Listen on hash change:

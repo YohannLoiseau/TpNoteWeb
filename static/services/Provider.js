@@ -2,7 +2,7 @@ import { ENDPOINT } from '../config.js'
 
 export default class Provider {
 
-    static fetchElem = async (limit = 10) => {
+    static fetchElem = async () => {
         const options = {
            method: 'GET',
            headers: {
@@ -10,7 +10,7 @@ export default class Provider {
            }
        };
        try {
-           const response = await fetch(`${ENDPOINT}?_limit=${limit}`, options)
+           const response = await fetch(ENDPOINT, options)
            const json = await response.json();
            return json
        } catch (err) {

@@ -1,3 +1,4 @@
+import LazyLoad from "../../../services/LazyLoad.js";
 import Provider from "../../../services/Provider.js";
 
 export default class PersonnagesAll {
@@ -10,14 +11,14 @@ export default class PersonnagesAll {
             <div class="personnages-list">
                 ${ personnages.map(personnage => 
                     /*html*/`
-                    <div class="personnage-card">
+                    <div class="personnage-card lazy-load">
                         <div class="card-body">
                             <h3 class="card-title text-primary">${personnage.name}</h3>
                             <p class="personnage-title">${personnage.title}</p>
-                            <img src="${personnage.icon}" alt="${personnage.name} Icon" class="personnage-icon">
+                            <img data-src="${personnage.icon}" alt="${personnage.name}" class="personnage-icon">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="#/personnage/${personnage.id}" class="btn btn-sm btn-outline-secondary">Voir plus ...</a>
+                                    <a href="#/personnage/${personnage.id}" class="btn btn-sm xbtn-outline-secondary">Voir plus ...</a>
                                 </div>
                             </div>
                         </div>
@@ -28,6 +29,10 @@ export default class PersonnagesAll {
             </div>
         `;
         return view;
+    }
+
+    async after_render() {
+        LazyLoad.initLazyLoad('lazy-load');
     }
 
 }

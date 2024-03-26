@@ -23,6 +23,14 @@ export default class Home {
         ).join('\n ');
         
         return /*html*/`
+            <div class="jumbotron">
+                <h2 class="display-4">Choisissez votre</h2>
+                <h1 class="display-1">CHAMPION</h1>
+                <p class="lead">Avec plus de 140 champions disponibles, vous en trouverez </p>
+                <p class="lead">forcément un qui vous corresponde. Maîtrisez-en un, ou</p>
+                <p class="lead">maîtrisez-les tous.</p>
+            </div>
+
             <h2>Les 3 premiers personnages :</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 ${html}
